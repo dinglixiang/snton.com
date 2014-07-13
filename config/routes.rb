@@ -1,4 +1,5 @@
 SntonCom::Application.routes.draw do
+  root "dashboard#index"
   resources :topics
 
   # The priority is based upon order of creation: first created -> highest priority.
