@@ -1,0 +1,31 @@
+<h1>Listing admin_topics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Clicks</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_topics.each do |admin_topic| %>
+      <tr>
+        <td><%= admin_topic.title %></td>
+        <td><%= admin_topic.content %></td>
+        <td><%= admin_topic.clicks %></td>
+        <td><%= link_to 'Show', admin_topic %></td>
+        <td><%= link_to 'Edit', edit_admin_topic_path(admin_topic) %></td>
+        <td><%= link_to 'Destroy', admin_topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Topic', new_admin_topic_path %>

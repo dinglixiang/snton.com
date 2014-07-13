@@ -1,6 +1,11 @@
 SntonCom::Application.routes.draw do
+  namespace :admin do
+    root "topics#index"
+    resources :topics
+  end
+
   root "dashboard#index"
-  resources :topics
+  resources :topics, only: [:show, :index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

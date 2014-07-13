@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @admin_topic.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @admin_topic.content %>
+</p>
+
+<p>
+  <strong>Clicks:</strong>
+  <%= @admin_topic.clicks %>
+</p>
+
+<%= link_to 'Edit', edit_admin_topic_path(@admin_topic) %> |
+<%= link_to 'Back', admin_topics_path %>
