@@ -1,0 +1,19 @@
+login: &login
+  adapter: mysql2
+  username: root
+  password: newpassword
+  host: 127.0.0.1
+  pool: 5
+  timeout: 5000
+  
+development:
+  <<: *login
+  database: snton_development
+
+test:
+  <<: *login
+  database: snton_test
+
+production:
+  <<: *login
+  database: snton_production 
