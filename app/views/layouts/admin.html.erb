@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SntonCom</title>
+  <%= stylesheet_link_tag    "admin", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "admin", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="padding-top: 50px;">
+  <%= render 'layouts/admin_navbar'%>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+          <li class="<%= 'active' if current_page?(admin_root_path) %>"><a href="/admin">Overview</a></li>
+          <li class="<%= 'active' if current_page?(admin_topics_path) %>"><a href="/admin/topics">所有文章</a></li>
+          <li class="<%= 'active' if current_page?(drafted_admin_topics_path) %>"><a href="/admin/topics/drafted">草稿文章</a></li>
+          <li class="<%= 'active' if current_page?(published_admin_topics_path) %>"><a href="/admin/topics/published">发布文章</a></li>
+          <li class="<%= 'active' if current_page?(banned_admin_topics_path) %>"><a href="/admin/topics/banned">禁止文章</a></li>
+          <li class="<%= 'active' if current_page?(new_admin_topic_path)%>"><a href="/admin/topics/new">创建文章</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header"><%= yield :subtitle%></h1>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

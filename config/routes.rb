@@ -1,7 +1,17 @@
 SntonCom::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   namespace :admin do
     root "topics#index"
-    resources :topics
+    resources :topics do
+      collection do
+        put 'publish'
+        put 'ban'
+        get 'published'
+        get 'banned'
+        get 'drafted'
+      end
+    end
   end
 
   root "dashboard#index"

@@ -1,13 +1,9 @@
+<% provide(:subtitle, @admin_topic.title)%>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @admin_topic.title %>
-</p>
-
-<p>
   <strong>Content:</strong>
-  <%= @admin_topic.content %>
+  <%= raw @admin_topic.content %>
 </p>
 
 <p>

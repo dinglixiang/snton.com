@@ -1,0 +1,15 @@
+zh-CN:
+  system:
+    title: Snton后台管理
+  helpers:
+    label:
+      topic:
+        title: 标题
+        content: 内容
+        clicks: 点击量
+    submit:
+      topic:
+        create: 创建文章
+        update: 更新文章
+
+

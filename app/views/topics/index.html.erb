@@ -15,10 +15,9 @@
   <tbody>
     <% @topics.each do |topic| %>
       <tr>
-        <td><%= topic.title %></td>
+        <td><%= link_to topic.title, topic %></td>
         <td><%= topic.content %></td>
         <td><%= topic.clicks %></td>
-        <td><%= link_to 'Show', topic %></td>
       </tr>
     <% end %>
   </tbody>
