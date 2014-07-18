@@ -1,36 +1,45 @@
-@charset "utf-8";
-/* CSS Document */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-body, ul, ol, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div,blockquote {
-  margin:0;
-  padding:0;
-  border:0;
-}
 body {
-  font-size:12px;
-  color:#A7A9AC;
-  font-family:"Arial";
-}
-select, input, img, select {
-  vertical-align:middle;
-}
-.clear {
-  clear:both;
-  font-size:0;
-  line-height:0;
-  height:0;
-}
-ul, ol, li {
-  list-style:none;
-}
-h4 {font-size:14px; color:#000000;}
-a {
-  font-size:12px;
-  text-decoration:none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 12px;
+  color: #A7A9AC;
+  font-family: "Arial";
 }
 
-.container {
-  margin-left: 5%;
-  margin-right: 5%;
-  border: 1px solid #fff;
+footer {
+  padding: 50px 0;
+  color: #777;
+  border-top: 1px solid #ddd;
+  background-color:#fff;
+  margin-top: -10px;
+}
+
+.row-footer {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.content-block {
+  border-bottom: 1px solid #ddd;
+}
+
+.welcome_heading {
+  /*color: #f7504f;*/
+  /*font-family: "proxima-nova-semibold",Arial,sans-serif;*/
+  /*line-height: 1.5;*/
+  /*font-size: 36px;*/
+  /*text-align: center;*/
+  /*padding: 10px 0 30px;*/
+}
+
+.content {
+  background-color:#f7f7f7;
+}
+
+.nav-pills > li {
+  float: left;
+  margin-top: 10px;
 }

@@ -1,2 +1,18 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<div id="snton-dynamic" class="content-block text-center">
+  <h3 class="welcome_heading">胜通动态</h3>
+</div>
+<div id="snton-about" class="content-block text-center">
+  <h3 class="welcome_heading">企业简介</h3>
+  <div><%= raw @about.content%></div>
+</div>
+<div id="snton-certificate" class="content-block text-center">
+  <h3 class="welcome_heading">资质证书</h3>
+</div>
+<div id="snton-job" class="content-block text-center">
+  <h3 class="welcome_heading">招才纳贤</h3>
+  <div><%= raw @job.content%></div>
+</div>
+<div id="snton-link" class="content-block text-center">
+  <h3 class="welcome_heading">联系我们</h3>
+  <div><%= raw @contact.content%></div>
+</div>

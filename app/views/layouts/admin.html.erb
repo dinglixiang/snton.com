@@ -18,6 +18,9 @@
           <li class="<%= 'active' if current_page?(published_admin_topics_path) %>"><a href="/admin/topics/published">发布文章</a></li>
           <li class="<%= 'active' if current_page?(banned_admin_topics_path) %>"><a href="/admin/topics/banned">禁止文章</a></li>
           <li class="<%= 'active' if current_page?(new_admin_topic_path)%>"><a href="/admin/topics/new">创建文章</a></li>
+          <li class="<%= 'active' if current_page?(about_admin_topics_path)%>"><%= link_to "企业简介", about_admin_topics_path%></li>
+          <li class="<%= 'active' if current_page?(job_admin_topics_path)%>"><a href="/admin/topics/job">招才纳贤</a></li>
+          <li class="<%= 'active' if current_page?(contact_admin_topics_path)%>"><a href="/admin/topics/contact">联系我们</a></li>
         </ul>
       </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

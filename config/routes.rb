@@ -10,12 +10,19 @@ SntonCom::Application.routes.draw do
         get 'published'
         get 'banned'
         get 'drafted'
+        get 'about'
+        get 'job'
+        get 'contact'
       end
     end
   end
 
   root "dashboard#index"
   resources :topics, only: [:show, :index]
+  get 'about', to: "topics#about", as: 'about'
+  get 'job', to: "topics#job", as: 'job'
+  get 'contact', to: "topics#contact", as: 'contact'
+  get 'certification', to: "topics#certification", as: 'certification'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

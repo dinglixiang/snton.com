@@ -1,6 +1,6 @@
-<% provide :subtitle, "编辑文章"%>
+<% provide :subtitle, "企业简介"%>
 
-<%= form_for(@admin_topic, url: admin_topic_path) do |f| %>
+<%= form_for(@admin_topic) do |f| %>
   <% if @admin_topic.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_topic.errors.count, "error") %> prohibited this admin_topic from being saved:</h2>
@@ -13,21 +13,19 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, class: "form-control"%>
+  <div class="field">
+    <%= f.hidden_field :title %>
   </div>
-  <div class="form-group">
-    <%= f.label :content %><br>
+  <div class="field">
     <%= f.cktext_area :content %>
   </div>
-  <div class="form-group">
-    <%= f.hidden_field :clicks, value: 0 %>
+  <div class="field">
+    <%= f.hidden_field :clicks %>
   </div>
   <br>
   <div class="actions">
-    <%= f.submit class: "btn btn-primary"%>
+    <%= f.submit "更新简介",class: "btn btn-primary"%>
   </div>
 <% end %>
 <br>
-<%= link_to '返回', admin_topics_path %>
+<%= link_to 'Back', admin_topics_path %>

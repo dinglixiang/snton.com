@@ -6,6 +6,19 @@ class Admin::TopicsController < AdminController
   # GET /admin/topics.json
   def index
     @admin_topics = Topic.all
+    @about = Topic.find_by_title("about")
+  end
+  
+  def about
+    @admin_topic = Topic.find_by_title("about")
+  end
+
+  def job 
+    @admin_topic = Topic.find_by_title("job")
+  end
+
+  def contact 
+    @admin_topic = Topic.find_by_title("contact")
   end
 
   def published
@@ -65,7 +78,7 @@ class Admin::TopicsController < AdminController
   def update
     respond_to do |format|
       if @admin_topic.update(admin_topic_params)
-        format.html { redirect_to @admin_topic, notice: 'Topic was successfully updated.' }
+        format.html { redirect_to admin_topic_path(@admin_topic), notice: 'Topic was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

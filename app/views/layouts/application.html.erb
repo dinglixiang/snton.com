@@ -8,10 +8,13 @@
 </head>
 <body>
 
-<div class="container">
-<%= render 'layouts/header'%>
-<%= yield %>
-</div>
-
+  <%= render 'layouts/header'%>
+  <div class="content">
+    <embed src="<%= asset_path('st.swf')%>" style="width:100%;"  height="460" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent">
+    <div>
+      <%= yield %>
+    </div>
+  </div>
+  <%= render 'layouts/footer'%>
 </body>
 </html>

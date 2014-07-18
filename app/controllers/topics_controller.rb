@@ -7,6 +7,18 @@ class TopicsController < ApplicationController
     @topics = Topic.published
   end
 
+  def about
+    @about = Topic.find_by_title("about")
+  end
+
+  def job
+    @job = Topic.find_by_title("job")
+  end
+
+  def contact
+    @contact= Topic.find_by_title("contact")
+  end
+
   # GET /topics/1
   # GET /topics/1.json
   def show
